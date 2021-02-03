@@ -44,6 +44,7 @@ socket.on('message', (message) => {
         createdAt: moment(message.createdAt).format('h:mm a')
     })
     $messages.insertAdjacentHTML('beforeend', html);
+    autoscroll();
 })
 
 socket.on('locationMessage', ({ url, createdAt, username }) => {
@@ -53,6 +54,7 @@ socket.on('locationMessage', ({ url, createdAt, username }) => {
         createdAt: moment(createdAt).format('h:mm a')
     })
     $messages.insertAdjacentHTML('beforeend', html);
+    autoscroll();
 })
 
 socket.on('roomData', ({ room, users }) => {
