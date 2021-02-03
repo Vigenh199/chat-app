@@ -1,17 +1,17 @@
 const socket = io();
 
 // Elements
-const $messageForm = document.getElementById('message-form');
+const $messageForm = document.querySelector('#message-form');
 const $messageFormInput = $messageForm.querySelector('input');
 const $messageFormButton = $messageForm.querySelector('button');
-const $sendLocationButton = document.getElementById('send-location');
-const $messages = document.getElementById('messages');
-const $sidebar = document.getElementById('sidebar');
+const $sendLocationButton = document.querySelector('#send-location');
+const $messages = document.querySelector('#messages');
+const $sidebar = document.querySelector('#sidebar');
 
 // Templates
-const messageTemplate = document.getElementById('message-template').innerHTML;
-const locationTemplate = document.getElementById('location-template').innerHTML;
-const sidebarTemplate = document.getElementById('sidebar-template').innerHTML;
+const messageTemplate = document.querySelector('#message-template').innerHTML;
+const locationTemplate = document.querySelector('#location-template').innerHTML;
+const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML;
 
 const autoscroll = () => {
     // New message element
